@@ -69,5 +69,5 @@ def Smallest_Multiple_Efficient(start,end):
                 checked_nums += 1
                 if checked_nums == end:
                     return value
-print("Largest number evenly divisible by all numbers in range: ",math.factorial(100))
-print("The smallest is: ",Smallest_Multiple_Efficient(1,100))
+print("Largest number evenly divisible by all numbers in range: ",math.factorial(20))
+print("The smallest is: ",Smallest_Multiple_Efficient(1,20))
