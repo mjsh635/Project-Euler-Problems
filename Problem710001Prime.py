@@ -14,6 +14,23 @@ def target_prime(nth_prime):
     int : the prime number that is nth 
     """
 
-    pass
+    list_of_primes = [2]
+    pot_prime = 2
+    # Find all the primes in a range of numbers
+    while (len(list_of_primes) <= nth_prime -1):
+        pot_prime += 1
+        if pot_prime % 2 != 0:
+            if pot_prime not in list_of_primes:
+                checked = 0
+                for prime in list_of_primes:
+                    if pot_prime % prime != 0:
+                        checked += 1
+                        if checked == len(list_of_primes):
+                            list_of_primes.append(pot_prime)
+                            break
+                    else:
+                        break
+        print("Found primes: ",len(list_of_primes),end='\r')
+    return list_of_primes[nth_prime-1]
 
-print(target_prime(6))
+print("\n",target_prime(10001))
